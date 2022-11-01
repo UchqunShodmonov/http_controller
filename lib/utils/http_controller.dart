@@ -23,7 +23,7 @@ class HttpController {
         uri,
         headers: headers ?? {},
       );
-      log("<-GET-> $path \n Response StatusCode -> ${response.statusCode} \nResponse Body -> ${response.body}");
+      log("<-GET-> $path \n <-Response StatusCode -> ${response.statusCode} \n<-Response Body -> ${response.body}");
       HttpResponse data = HttpResponse();
       data.statusCode = response.statusCode;
       if (response.body.isNotEmpty && response.body.contains(':')) {
@@ -47,7 +47,7 @@ class HttpController {
         headers: headers ?? {},
         body: jsonEncode(request),
       );
-      log("<-POST-> $path \n Response StatusCode -> ${response.statusCode} \nResponse Body -> ${response.body}");
+      log("<-POST-> $path \n<-Response StatusCode -> ${response.statusCode} \n<-Response Body -> ${response.body}");
       HttpResponse data = HttpResponse();
       data.statusCode = response.statusCode;
       if (response.body.isNotEmpty && response.body.contains(':')) {
@@ -71,7 +71,7 @@ class HttpController {
         headers: headers ?? {},
         body: jsonEncode(request),
       );
-      log("<-PATCH-> $path \n Response StatusCode -> ${response.statusCode} \nResponse Body -> ${response.body}");
+      log("<-PATCH-> $path \n<-Response StatusCode -> ${response.statusCode} \n<-Response Body -> ${response.body}");
       HttpResponse data = HttpResponse();
       data.statusCode = response.statusCode;
       if (response.body.isNotEmpty && response.body.contains(':')) {
@@ -95,7 +95,7 @@ class HttpController {
         headers: headers ?? {},
         body: jsonEncode(request),
       );
-      log("<-DELETE-> $path \n Response StatusCode -> ${response.statusCode} \nResponse Body -> ${response.body}");
+      log("<-DELETE-> $path \n<-Response StatusCode -> ${response.statusCode} \n<-Response Body -> ${response.body}");
       HttpResponse data = HttpResponse();
       data.statusCode = response.statusCode;
       if (response.body.isNotEmpty && response.body.contains(':')) {
